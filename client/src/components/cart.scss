@@ -1,0 +1,51 @@
+@mixin PosNDis($position, $display){
+    position: $position;
+    display: $display;
+}
+.cart-container{
+    position: absolute;
+    margin: 15em 35em ;
+    
+}
+b{
+    font-size: 1.5em;
+}
+.cart, .items{
+    padding-bottom: 1em;
+}
+.items{
+    padding-bottom: 3em;
+}
+.cart-card{
+    @include PosNDis($position: absolute, $display:flex);
+    background-color: white;
+    border-radius: 40px;
+    width: 50rem;
+    height: 25rem;
+}
+.cart-dropdown{
+    position: relative;
+    left: 2em;
+    top: 2em;
+}
+.cart-dropdown-menu{
+    position: absolute;
+    top: calc(100% + .25rem);
+    background-color: white;
+    color: black;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0, .1);
+    padding: 0.5em;
+    color: black;
+    opacity: 0;
+}
+
+
+.cart-remove{
+    padding-top: 4em;
+}
+.cart-dropdown > .dropdown-toggle:focus + .cart-dropdown-menu{
+    opacity: 1;
+}
+button{
+    background-color: white;
+}

@@ -1,0 +1,15 @@
+@import "./home.scss";
+
+.shop-background {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 10vh);
+    right: 0%;
+    top: 10vh;
+    display: flex;
+    justify-content: center;
+}
+
+// .cards-section{
+//     animation:fadeIn 1s ease-in forwards;
+// }

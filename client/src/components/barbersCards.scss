@@ -1,0 +1,165 @@
+@mixin show($showFlex: flex, $showColor) {
+    display: $showFlex;
+    background-color: $showColor;
+}
+
+.barbers-cards-container {
+    position: fixed;
+    //  width: 80em;
+    // height: 55rem;
+    height: fit-content;
+    margin-left: 20%;
+    margin-top: 15%;
+    display: flex;
+    scroll-behavior: smooth;
+    
+}
+
+.barbers-cards {
+    border-radius: 15px;
+    display: flex;
+    flex: 0 0 auto;
+    width: 70em;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: #3e3f5ea1;
+    height: 30em;
+    margin-top: 18em;
+    margin-left: 25em;
+    // padding-left: 15em;
+    // padding-right: 10em;
+
+    
+    
+}
+
+.barbers-img {
+    // object-position: 0em -5em;
+    // height: 35em;
+    width: 100%;
+    height: 30em;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px;
+}
+
+
+
+
+
+// .swiper-button-prev::after, .swiper-button-next::after {
+//     width: 5em;
+//     height: 5em;
+//     padding: 0.5em;
+//     cursor: pointer;
+//     max-width: 100%;
+//     color: white;
+// }
+
+
+.scrollable-tabs-container {
+    // overflow-x:hidden;
+    margin-bottom: 20em;
+    display: flex;
+    width: 70em;
+    border-radius: 15px;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overscroll-behavior-inline: contain;
+    
+    // display: flex;
+    // align-items: center;
+    // overflow: hidden;
+    // height: fit-content;
+    
+    // margin: 0em;
+    // max-width: 100%;
+    // margin: 0;
+    
+}
+.scrollable-tabs-container::-webkit-scrollbar{
+    display: none;
+}
+// .barbers-cards {
+//     min-width: 100%;
+//     min-height: 100%;
+//     display: flex;
+//     flex-shrink: 0;
+//     align-items: center;
+//     justify-content: center;
+//     position: relative;
+// }
+
+ .swiper-button-prev::after, .swiper-button-next::after {
+    @include show($showColor: rgba(148, 145, 147, 0.37));
+    position: relative;
+    color: white;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 1em;
+    border-radius: 50%;
+    top: 4.5em;
+}
+
+.swiper-button-prev::after {
+    left: 3em;
+}
+
+.swiper-button-next::after {
+    right: 3em;
+}
+
+.barber-description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.barbers-name {
+    font-size: 3em;
+    margin: 0.5em 0;
+    height: 0px;
+    width: 100%;
+    padding-bottom: 1em;
+}
+
+.barbers-price {
+    margin: 1em 0;
+    padding-bottom: 0em;
+    height: 20px;
+    font-size: 1.6em;
+}
+
+.barbers-reviews {
+    font-size: 1.3em;
+    height: 20px;
+    padding-bottom: 0em;
+    cursor: pointer;
+}
+
+
+
+.barbers-set-appointment button {
+    padding: 2em 2em;
+    font-size: 1.0em;
+    border: none;
+    border-radius: 5px;
+    background-color: #5b5c77;
+    color: white;
+    cursor: pointer;
+    margin-top: 3em;
+}
+
+.barbers-set-appointment button:hover {
+    background-color: #2e2f4e;
+}
+
+.current-page-barbers {
+    color: black;
+    font-size: 2.5em;
+    padding-top: 20px;
+    position: absolute;
+    text-align: center;
+    font-weight: 200px;
+}

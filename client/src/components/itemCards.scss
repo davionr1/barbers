@@ -1,0 +1,94 @@
+
+.cards-container {
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap; 
+    // justify-content: space-between; 
+    // animation: transitionIn ease-in 1s;
+    gap: 1em; 
+    width: 50%;
+    justify-content: center;
+    margin: 4% -25%;
+}
+
+.add-stock {
+    // position: absolute;
+    font-size: 4em;
+    
+}
+
+.card{
+    background-color: white;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    padding: 2em;
+    height: 22em; 
+}
+.card > div:not(.card){
+    animation: transitionIn ease-in 0.7s;
+}
+@import "./home.scss"; 
+
+
+.card:nth-child(4n+1){
+    animation-delay: 3s;
+}
+.card:nth-child(4n+2){
+    animation-delay: 2s;
+}
+.card:nth-child(4n+3){
+    animation-delay: 0.4s;
+}
+.card:nth-child(4n+4){
+    animation-delay: 0.5s;
+}
+
+.card-description {
+    color: #333;
+    font-size: 1em;
+    margin: 0.5em 0;
+    height: 20px;
+}
+
+
+.card-review {
+    color: #888;
+    font-size: 0.9;
+    margin: 0.5em 0;
+    height: 20px;
+    cursor: pointer;
+}
+
+
+.card-price {
+    color: #000;
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    font-weight: bold;
+    height: 20px;
+}
+
+.card-addCart {
+    margin-top: 1em; 
+    cursor: pointer;
+}
+
+
+.card-addCart button {
+    padding: 0.5em 1em; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #3E3F5E;
+    color: white;
+    cursor: pointer; 
+}
+
+
+.card-addCart button:hover {
+    background-color: #8a8cc2;
+    color: #000;
+} 
